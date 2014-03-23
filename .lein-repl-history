@@ -1,0 +1,5 @@
+(require 'helloworld)
+(require 'hello.world)
+(require 'helloworld.web)
+(helloworld.web/-main 5000)
+curl
