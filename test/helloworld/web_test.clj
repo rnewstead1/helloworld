@@ -1,6 +1,12 @@
 (ns helloworld.web-test
-  (:require [clojure.test :refer :all]
-            [helloworld.web :refer :all]))
+  (:use midje.sweet))
 
-(deftest first-test
-  (is false "Tests should be written"))
+(defn first-element [sequence default]
+  (if (empty? sequence)
+    default
+    (first sequence)))
+
+(fact "it normally returns the first element"
+      (first-element [1 2 3] :default) => 1
+      (first-element '(1 2 3) :default) => 1)
+
