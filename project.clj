@@ -13,4 +13,5 @@
   :min-lein-version "2.0.0"
   :plugins [[environ/environ.lein "0.2.1"]]
   :hooks [environ.leiningen.hooks]
-  :profiles {:dev {:dependencies [[midje "1.5.0"]]}})
+  :profiles {:dev {:dependencies [[midje "1.5.0"]]
+             :plugins [[lein-midje "3.0.0"]]}} )
